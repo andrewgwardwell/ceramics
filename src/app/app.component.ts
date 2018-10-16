@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
   title = 'kathleenceramics';
-  src='/src/assets/images/1927.jpg';
-  src2='/src/assets/images/1927head.jpg';
+  src='/src/assets/images/potter.jpg';
+  src2='/src/assets/images/mugs.jpg';
+  mugs:any= ['/src/assets/images/mugs1.jpg', '/src/assets/images/mugs.jpg'];
+  bowls:any=['/src/assets/images/bowls.jpg','/src/assets/images/bowls.jpg'];
+  teabowls:any=['/src/assets/images/teabowl.jpg']
+
   imagePath='';
+  showMugs= false;
+  showBowls= false;
+  showTeabowls= false;
+  toggleMugs(){
+    this.showMugs=!this.showMugs;
+  };
+  toggleBowls(){
+    this.showBowls=!this.showBowls;
+  }; 
+  toggleTeabowls(){
+    this.showTeabowls=!this.showTeabowls;
+  }
   ngOnInit(){
     this.changeImage('boom');
   }
